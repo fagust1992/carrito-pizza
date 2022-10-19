@@ -12,17 +12,17 @@ export default function Home() {
     <>
       <div className="row">
         {dato.map((intem, index) => (
-          <div key={index} className="col-12 col-sm-6 col-lg-3 mb-4">
+          <div key={index} className="col-12 col-sm-6 col-lg-3 mb-4 cartas">
             <div className="card">
-              <div
-                style={{
-                  backgroundImage: `url(${intem.img})`,
-                  width: "100%",
-                  height: "150px",
-                  backgroundSize: "cover",
-                }}
-              ></div>
               <div className="card-body">
+                <div
+                  style={{
+                    backgroundImage: `url(${intem.img})`,
+                    width: "100%",
+                    height: "150px",
+                    backgroundSize: "cover",
+                  }}
+                ></div>
                 <h3 className="card-title">{intem.name}</h3>
                 <hr></hr>
                 <h5 className="">ingredientes:</h5>

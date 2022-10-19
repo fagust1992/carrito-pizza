@@ -6,7 +6,7 @@ import Header from "./Components/Header";
 import { ContextProvider } from "../src/Context/Context";
 import Home from "../src/Paginas/Home";
 import Detalle from "../src/Paginas/Detalle";
-
+import Footer from "../src/Components/Footer";
 function App() {
   return (
     <div className="App">
@@ -21,6 +21,7 @@ function App() {
               <Route path="/carrito" element={""} />
             </Routes>
           </div>
+          <Footer />
         </ContextProvider>
       </BrowserRouter>
     </div>

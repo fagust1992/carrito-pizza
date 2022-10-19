@@ -12,24 +12,27 @@ export default function Detalle() {
     <>
       {dato[x] ? (
         <div className="padre  row">
-          <div className="col ">
+          <div className="col  ">
             <div className="imagen-carta">
-              <img src={dato[x].img} alt="" width="300" height="300" />
+              <img src={dato[x].img} alt="" className="imagen-detalle" />
             </div>
             <div
               className="texto-detalle "
               style={{ display: "flex", flexDirection: "column" }}
             >
-              <h1>{dato[x].name}</h1>
+              <h1 style={{ fontSize: "18px" }}>{dato[x].name}</h1>
               <hr></hr>
               <p>{dato[x].desc}</p>
-              <h4>Ingredientes:</h4>
-              {dato[x].ingredients.map((ingredient, i) => (
-                <p key={i} className="">
-                  <img src={icono} alt="" height="20" width="20" /> {ingredient}
-                </p>
-              ))}
-              <h2> precio:${dato[x].price}</h2>
+              <div className="ingredientes">
+                <h4 style={{ fontSize: "18px" }}>Ingredientes:</h4>
+                {dato[x].ingredients.map((ingredient, i) => (
+                  <p key={i} className="">
+                    <img src={icono} alt="" height="20" width="20" />{" "}
+                    {ingredient}
+                  </p>
+                ))}
+                <h2 style={{ fontSize: "18px" }}> precio:${dato[x].price}</h2>
+              </div>
             </div>
           </div>
         </div>
